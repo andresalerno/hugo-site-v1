@@ -10,9 +10,11 @@ disqusShortname = "andresalerno.disqus.com"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-62383348-1"
 
-logo = "static/img/logo.png"
+public_folder = "/public/img"
 
-favicon = "static/img/favicon.ico"
+logo = "/public/img/logo.png"
+
+favicon = "/public/img/favicon.ico"
 
 
 ignoreFiles = ["\\.rmd$", "_files$", "_cache$"]
