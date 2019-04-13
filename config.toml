@@ -1,0 +1,183 @@
+baseurl = "http://aspartners.com.br"
+#title = "AS Partners Finance & Tech Solutions"
+theme = "hugo-universal-theme"
+languageCode = "UTF-8"
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "pt-br"
+# Enable comments by entering your Disqus shortname
+relativeURLs = true
+disqusShortname = "andresalerno.disqus.com"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = "UA-62383348-1"
+
+logo = "static/img/logo.png"
+
+favicon = "static/img/favicon.ico"
+
+
+ignoreFiles = ["\\.rmd$", "_files$", "_cache$"]
+
+# Define the number of posts per page
+paginate = 10
+
+[menu]
+
+# Main menu
+
+[[menu.main]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Blog"
+    url  = "/blog/"
+    weight = 2
+
+#[[menu.main]]
+#    name = "FAQ"
+#    identifier = "faq"
+#    url  = "/faq/"
+#    weight = 3
+
+[[menu.main]]
+    name = "Contato"
+    url  = "/contact/"
+    weight = 3
+
+# Top bar social links menu
+
+#[[menu.topbar]]
+#    weight = 1
+#    name = "GitHub"
+#    url = "https://github.com/andresalerno"
+#    pre = "<i class='fab fa-github fa-2x'></i>"
+
+[[menu.topbar]]
+    weight = 1
+    name = "Facebook"
+    url = "https://www.facebook.com/aspartnersconsultoria/"
+    pre = "<i class='fab fa-facebook fa-2x'></i>"
+
+[[menu.topbar]]
+    weight = 2
+    name = "Twitter"
+    url = "https://twitter.com/andresalerno"
+    pre = "<i class='fab fa-twitter-square fa-2x'></i>"
+
+[[menu.topbar]]
+    weight = 3
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/andresalerno/"
+    pre = "<i class='fab fa-linkedin fa-2x'></i>"
+
+[[menu.topbar]]
+    weight = 4
+    name = "Email"
+    url = "mailto:andresalerno22@gmail.com"
+    pre = "<i class='fas fa-envelope fa-2x'></i>"
+
+[params]
+    viewMorePostLink = "/blog/"
+    author = "andresalerno"
+    defaultKeywords = ["andresalerno", "hugo", "go"]
+    defaultDescription = "Site template made by devcows using hugo"
+
+    # Google Maps API key (if not set will default to not passing a key.)
+    googleMapsApiKey = ""
+
+    #Â Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "green"
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    #
+    #Â Enable the contact form by entering your Formspree.io email
+    email = "andresalerno22@gmail.com"
+
+    about_us = "<p>São mais de 20 anos de mercado financeiro, desenvolvidos dentro de áreas de crédito para pessoa física e jurídica. Isso nos possibilitou irmos além dentro da área financeira. Hoje desenvolvemos projetos estratégicos e com uso de tecnologias capazes de levar pessoas e empresas muito além das atuais fronteiras</p>"
+    copyright = "Copyright (c) 2017 - 2018<br> AS Partners Finance & Tech Consulting<br> Todos os direitos reservados."
+
+    # Format dates with Go's time formatting
+    date_format = "02/01/2006"
+
+    logo = "~/static/img/as_partners.png"
+    address = """<p><strong>AS Partners Finance & Tech Consulting</strong>
+        <br>Avenida Cassiano Ricardo, 319 - Pátio das Américas - sala 508
+        <br>São José dos Campos - SP
+        <br>
+        <br>Brasil
+        <br>
+        <strong>Paraiba Valley</strong>
+      </p>
+      """
+    latitude = "-23.2140367"
+    longitude = "-45.9089686"
+
+[Permalinks]
+    blog = "/blog/:year/:month/:day/:filename/"
+
+# Enable or disable top bar with social icons
+[params.topbar]
+    enable = true
+    text = """<p class="hidden-sm hidden-xs">Escreva para nós! Anote aí: andresalerno22@gmail.com</p>
+      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>
+      <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+      </p>
+      """
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = true
+    tags = true
+    search = true
+
+[params.carousel]
+    enable = true
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more information take a look at the README.
+
+[params.features]
+    enable = false
+    # All features are defined in their own files. You can find example items
+    # at 'exampleSite/data/features'.
+    # For more information take a look at the README.
+
+[params.testimonials]
+    enable = true
+    # All testimonials are defined in their own files. You can find example items
+    # at 'exampleSite/data/testimonials'.
+    # For more informtion take a look at the README.
+    title = "Gente que faz a diferença junto com a gente!"
+    subtitle = "Nossas ideias tem sido somadas a de nossos clientes, parceiros e fornecedores. É nessa hora que os resultados conjuntos desafiam a matemática, e nossa experiência tem resultado em performance superior e vantagem competitiva sustentável"
+
+[params.see_more]
+    enable = false
+    icon = "fa fa-file-code-o"
+    title = "Quer um super desconto em nossos cursos?"
+    subtitle = "Nossos cursos tem sido desenvolvidos em renomadas escolas de negócios e estão sendo adaptados para o ambiente online"
+    link_url = "/contact"
+    link_text = "Escreva para nós! Quero receber participar de grupos comprometidos com o desenvolvimento"
+
+[params.clients]
+    enable = false
+    # All clients are defined in their own files. You can find example items
+    # at 'exampleSite/data/clients'.
+    # For more informtion take a look at the README.
+    title = "Nossos clientes e parceiros"
+    subtitle = "Gente que acredita em nossas ideias e projetos, mas acima de tudo, que são capazes e sonham em fazer uma grande diferença"
+
+[params.recent_posts]
+    enable = true
+    title = "Blog"
+    subtitle = "Sabe aquele espaço em que você chega e aprende algo interessante? E não é só isso! Queremos que ele seja também aquele espaço onde você mostre as suas ideias e projetos e seja reconhecido pelos seus trabalhos. Chega de blá blá blá, aprenda, ensine e faça a diferença na vida de pessoas e empresas"
