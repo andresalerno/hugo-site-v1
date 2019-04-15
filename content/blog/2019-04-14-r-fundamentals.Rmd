@@ -1,17 +1,18 @@
 ---
-title: R Fundamentals
-author: Prof Andre Salerno, MSc
+title: "R Fundamentals"
+author: "Prof. Andre Salerno, MSc"
 date: '2019-04-14'
-slug: r-fundamentals
-categories:
-  - R
-tags: []
+categories: ["R"]
+tags: ["fundamentals", "commands"]
+draft: false
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE, warning = FALSE)
 load("C:/Users/andre/r_programming/blogdown/env.RData")
 ```
+
+It is very important in terms of computing knowledge that during your daily jorney with the R Programming you should make a notebook with the principals commands, like a computing R library. Because oh that I have decided done this alphabetical list with the major commands in R. Enjoy it!
 
 ### Asign
 
