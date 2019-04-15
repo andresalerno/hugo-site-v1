@@ -1,9 +1,0 @@
----
-title: R Fundamentals
-author: Prof Andre Salerno, MSc
-date: '2019-04-14'
-slug: r-fundamentals
-categories:
-  - R
-tags: []
----
