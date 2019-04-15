@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fundamentals on </title>
-    <link>/tags/fundamentals/</link>
+    <link>http://aspartners.com.br/tags/fundamentals/</link>
     <description>Recent content in Fundamentals on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>UTF-8</language>
     <lastBuildDate>Sun, 14 Apr 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/fundamentals/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://aspartners.com.br/tags/fundamentals/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R Fundamentals</title>
-      <link>/blog/2019/04/14/2019-04-14-r-fundamentals/</link>
+      <link>http://aspartners.com.br/blog/2019/04/14/2019-04-14-r-fundamentals/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2019/04/14/2019-04-14-r-fundamentals/</guid>
+      <guid>http://aspartners.com.br/blog/2019/04/14/2019-04-14-r-fundamentals/</guid>
       <description>It is very important in terms of computing knowledge that during your daily jorney with the R Programming you should make a notebook with the principals commands, like a computing R library. Because oh that I have decided done this alphabetical list with the major commands in R. Enjoy it!
 Asignz &amp;lt;- x + yz## [1] 7Basic operationsn + 5## [1] 15Code Flowif (x &amp;lt; y){print(&amp;quot;x is lesser than y&amp;quot;)} else if (x == y){print(&amp;quot;x is equal to y&amp;quot;)} else {print(&amp;quot;x is greater than y&amp;quot;)}## [1] &amp;quot;x is greater than y&amp;quot;for (i in 1:10) {print(i)}## [1] 1## [1] 2## [1] 3## [1] 4## [1] 5## [1] 6## [1] 7## [1] 8## [1] 9## [1] 10t &amp;lt;- matrix(1:6, nrow = 2, ncol = 3)t## [,1] [,2] [,3]## [1,] 1 3 5## [2,] 2 4 6for (i in seq(nrow(t))) {for(j in seq(ncol(t))){print(t[i,j])}}## [1] 1## [1] 3## [1] 5## [1] 2## [1] 4## [1] 6Data Frameso &amp;lt;- c(1, 3, 5)p &amp;lt;- c(&amp;quot;red&amp;quot;, &amp;quot;yellow&amp;quot;, &amp;quot;blue&amp;quot;)q &amp;lt;- c(TRUE, FALSE, TRUE)df &amp;lt;- data.</description>
     </item>
