@@ -1,0 +1,397 @@
+---
+title: R Fundamentals
+author: Prof Andre Salerno, MSc
+date: '2019-04-14'
+slug: r-fundamentals
+categories:
+  - R
+tags: []
+---
+
+
+
+<div id="asign" class="section level3">
+<h3>Asign</h3>
+<pre class="r"><code>z &lt;- x + y
+z
+## [1] 7</code></pre>
+</div>
+<div id="basic-operations" class="section level3">
+<h3>Basic operations</h3>
+<pre class="r"><code>n + 5
+## [1] 15</code></pre>
+</div>
+<div id="code-flow" class="section level3">
+<h3>Code Flow</h3>
+<pre class="r"><code>if (x &lt; y){
+  print(&quot;x is lesser than y&quot;)
+} else if (x == y){
+  print(&quot;x is equal to y&quot;)
+} else {
+  print(&quot;x is greater than y&quot;)
+}
+## [1] &quot;x is greater than y&quot;
+
+for (i in 1:10) {
+  print(i)
+}
+## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10
+
+t &lt;- matrix(1:6, nrow = 2, ncol = 3)
+t
+##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6
+
+for (i in seq(nrow(t))) {
+  for(j in seq(ncol(t))){
+    print(t[i,j])
+  }
+}
+## [1] 1
+## [1] 3
+## [1] 5
+## [1] 2
+## [1] 4
+## [1] 6</code></pre>
+</div>
+<div id="data-frames" class="section level3">
+<h3>Data Frames</h3>
+<pre class="r"><code>o &lt;- c(1, 3, 5)
+p &lt;- c(&quot;red&quot;, &quot;yellow&quot;, &quot;blue&quot;)
+q &lt;- c(TRUE, FALSE, TRUE)
+df &lt;- data.frame(o,p,q)
+df
+##   o      p     q
+## 1 1    red  TRUE
+## 2 3 yellow FALSE
+## 3 5   blue  TRUE
+
+df[2,1]
+## [1] 3
+df[,&quot;p&quot;]
+## [1] red    yellow blue  
+## Levels: blue red yellow
+
+r &lt;- iris
+
+ncol(r)
+## [1] 5
+
+nrow(r)
+## [1] 150
+
+head(r, 2)
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+
+str(r)
+## &#39;data.frame&#39;:    150 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+</div>
+<div id="division-of-variables" class="section level3">
+<h3>Division of variables</h3>
+<pre class="r"><code>x / y
+## [1] 1.333333</code></pre>
+</div>
+<div id="exponential" class="section level3">
+<h3>Exponential</h3>
+<pre class="r"><code>exp(y)
+## [1] 20.08554</code></pre>
+</div>
+<div id="factor" class="section level3">
+<h3>Factor</h3>
+<pre class="r"><code>f &lt;- c(1,4,7,9,8,1)
+f &lt;- factor(f)
+f
+## [1] 1 4 7 9 8 1
+## Levels: 1 4 7 8 9
+levels(f)
+## [1] &quot;1&quot; &quot;4&quot; &quot;7&quot; &quot;8&quot; &quot;9&quot;
+
+factor(f, exclude = 4)
+## [1] 1    &lt;NA&gt; 7    9    8    1   
+## Levels: 1 7 8 9
+
+g &lt;- c(1,2,7,7,1,2,2,7,1,7)
+g &lt;- factor(g, levels = c(1,2,7), ordered = TRUE)
+g
+##  [1] 1 2 7 7 1 2 2 7 1 7
+## Levels: 1 &lt; 2 &lt; 7</code></pre>
+</div>
+<div id="factorial" class="section level3">
+<h3>Factorial</h3>
+<pre class="r"><code>factorial(y)
+## [1] 6</code></pre>
+</div>
+<div id="functions" class="section level3">
+<h3>Functions</h3>
+<pre class="r"><code>squaredNum &lt;- function(number){
+  s &lt;- number^2
+  return(s)
+}
+
+squaredNum(25)
+## [1] 625</code></pre>
+</div>
+<div id="lists" class="section level3">
+<h3>Lists</h3>
+<pre class="r"><code>m &lt;- list(1:4, &quot;book&quot;, 1+4i)
+m
+## [[1]]
+## [1] 1 2 3 4
+## 
+## [[2]]
+## [1] &quot;book&quot;
+## 
+## [[3]]
+## [1] 1+4i
+
+m[[1]][2] # accessing elements in a list
+## [1] 2</code></pre>
+</div>
+<div id="logical-operators" class="section level3">
+<h3>Logical operators</h3>
+<pre class="r"><code>x &gt; y
+## [1] TRUE
+
+x + y != 8
+## [1] TRUE
+
+x == y
+## [1] FALSE
+
+x &amp; y &gt; 2
+## [1] TRUE
+
+isTRUE(x &lt; y)
+## [1] FALSE</code></pre>
+</div>
+<div id="matrices" class="section level3">
+<h3>Matrices</h3>
+<pre class="r"><code>i &lt;- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3, byrow = TRUE, dimnames = list(c(&quot;Obs1&quot;, &quot;Obs2&quot;), c(&quot;Col1&quot;, &quot;Col2&quot;, &quot;Col3&quot;)))
+i
+##      Col1 Col2 Col3
+## Obs1    1    2    3
+## Obs2    4    5    6
+
+j &lt;- rbind(1:3, 4:6, 10:12)
+j
+##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]   10   11   12
+
+k &lt;- cbind(1:3, 4:6, 10:12)
+k
+##      [,1] [,2] [,3]
+## [1,]    1    4   10
+## [2,]    2    5   11
+## [3,]    3    6   12
+
+l &lt;- array(c(1,2,3,4,5,6), dim = c(2,3))
+l
+##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6
+
+l[1,2]
+## [1] 3</code></pre>
+</div>
+<div id="matrix-functions" class="section level3">
+<h3>Matrix Functions</h3>
+<pre class="r"><code>diag(l) # matrix diagonal
+## [1] 1 4
+
+dim(l) # dimensions
+## [1] 2 3
+
+colSums(l) # column sums
+## [1]  3  7 11
+
+rowSums(l) # row sums
+## [1]  9 12
+
+t(l) # matrix transpose
+##      [,1] [,2]
+## [1,]    1    2
+## [2,]    3    4
+## [3,]    5    6</code></pre>
+</div>
+<div id="maximum-value" class="section level3">
+<h3>Maximum value</h3>
+<pre class="r"><code>max(x,y)
+## [1] 4</code></pre>
+</div>
+<div id="minimum-value" class="section level3">
+<h3>Minimum value</h3>
+<pre class="r"><code>min(x,y)
+## [1] 3</code></pre>
+</div>
+<div id="multiplication-of-variables" class="section level3">
+<h3>Multiplication of variables</h3>
+<pre class="r"><code>x * y
+## [1] 12</code></pre>
+</div>
+<div id="objects" class="section level3">
+<h3>Objects</h3>
+<pre class="r"><code>n &lt;- 10</code></pre>
+</div>
+<div id="pi-number" class="section level3">
+<h3>pi number:</h3>
+<pre class="r"><code>x * pi
+## [1] 12.56637</code></pre>
+</div>
+<div id="power-of-variables" class="section level3">
+<h3>Power of variables</h3>
+<pre class="r"><code>x ** y
+## [1] 64</code></pre>
+</div>
+<div id="sign-of-a-number" class="section level3">
+<h3>Sign of a number</h3>
+<pre class="r"><code>sign(y)
+## [1] 1</code></pre>
+</div>
+<div id="square-root" class="section level3">
+<h3>Square root</h3>
+<pre class="r"><code>sqrt(y)
+## [1] 1.732051</code></pre>
+</div>
+<div id="string" class="section level3">
+<h3>String</h3>
+<pre class="r"><code>h &lt;- &quot;This is our first string&quot;
+class(h)
+## [1] &quot;character&quot;</code></pre>
+</div>
+<div id="string-function" class="section level3">
+<h3>String function</h3>
+<pre class="r"><code>nchar(h)
+## [1] 24
+
+substring(h, 4)
+## [1] &quot;s is our first string&quot;
+
+substring(h, 1,4)
+## [1] &quot;This&quot;
+
+strsplit(h, &quot; &quot;)
+## [[1]]
+## [1] &quot;This&quot;   &quot;is&quot;     &quot;our&quot;    &quot;first&quot;  &quot;string&quot;
+
+grep(&quot;our&quot;, h)
+## [1] 1
+
+grep(&quot;book&quot;, h)
+## integer(0)
+
+regexpr(&quot;our&quot;,h)
+## [1] 9
+## attr(,&quot;match.length&quot;)
+## [1] 3
+## attr(,&quot;index.type&quot;)
+## [1] &quot;chars&quot;
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+
+tolower(h)
+## [1] &quot;this is our first string&quot;
+
+toupper(h)
+## [1] &quot;THIS IS OUR FIRST STRING&quot;
+
+sub(&quot;our&quot;, &quot;my&quot;, h)
+## [1] &quot;This is my first string&quot;
+
+paste(h, &quot;My book&quot;, sep = &quot; : &quot;)
+## [1] &quot;This is our first string : My book&quot;</code></pre>
+</div>
+<div id="subtractions-of-variables" class="section level3">
+<h3>Subtractions of variables</h3>
+<pre class="r"><code>x - y
+## [1] 1</code></pre>
+</div>
+<div id="sum-variables" class="section level3">
+<h3>Sum variables</h3>
+<pre class="r"><code>x &lt;- 4
+y &lt;- 3
+
+x + y
+## [1] 7</code></pre>
+</div>
+<div id="vector" class="section level2">
+<h2>Vector</h2>
+<pre class="r"><code>a &lt;- c(1,3,5,8)
+class(a)
+## [1] &quot;numeric&quot;
+
+a + 3 ## adding 3
+## [1]  4  6  8 11
+
+b &lt;- c(1:10) # consecutive numbers
+b
+##  [1]  1  2  3  4  5  6  7  8  9 10
+
+c &lt;- seq(1, 5, by = 0.5)
+c
+## [1] 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0
+
+d &lt;- seq(1, 5, length.out = 22)
+d
+##  [1] 1.000000 1.190476 1.380952 1.571429 1.761905 1.952381 2.142857
+##  [8] 2.333333 2.523810 2.714286 2.904762 3.095238 3.285714 3.476190
+## [15] 3.666667 3.857143 4.047619 4.238095 4.428571 4.619048 4.809524
+## [22] 5.000000
+
+e &lt;- rep(22, 4)
+e
+## [1] 22 22 22 22
+
+rev(b) # reverse
+##  [1] 10  9  8  7  6  5  4  3  2  1</code></pre>
+<div id="vector-indexing" class="section level3">
+<h3>Vector indexing</h3>
+<pre class="r"><code>a[-3] # excluding third element
+## [1] 1 3 8
+
+a[2] # choosing second element
+## [1] 3
+
+a[1:2] # choosing sequence
+## [1] 1 3
+
+a[a&gt;2 &amp; a&lt;6]
+## [1] 3 5
+
+a[c(TRUE, FALSE, FALSE, TRUE)]
+## [1] 1 8</code></pre>
+</div>
+<div id="vector-functions" class="section level3">
+<h3>Vector functions</h3>
+<pre class="r"><code>sum(a)
+## [1] 17
+
+prod(a)
+## [1] 120
+
+length(a)
+## [1] 4
+
+a[1] &lt;- 4
+a
+## [1] 4 3 5 8</code></pre>
+</div>
+</div>

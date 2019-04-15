@@ -1,6 +1,7 @@
 baseurl = "http://aspartners.com.br"
 #title = "AS Partners Finance & Tech Solutions"
 theme = "hugo-universal-theme"
+themesDir = "C:/Users/andre/r_programming/blogdown/themes"
 languageCode = "UTF-8"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "pt-br"
@@ -10,7 +11,7 @@ disqusShortname = "andresalerno.disqus.com"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-62383348-1"
 
-logo = "img/logo.png"
+logo = "./public/img/logo.png"
 
 favicon = "img/favicon.ico"
 
@@ -110,7 +111,7 @@ paginate = 10
     # Format dates with Go's time formatting
     date_format = "02/01/2006"
 
-    logo = "~/static/img/as_partners.png"
+    logo = "~/static/img/logo.png"
     address = """<p><strong>AS Partners Finance & Tech Consulting</strong>
         <br>Avenida Cassiano Ricardo, 319 - Pátio das Américas - sala 508
         <br>São José dos Campos - SP

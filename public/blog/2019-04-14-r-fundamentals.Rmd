@@ -1,0 +1,336 @@
+---
+title: R Fundamentals
+author: Prof Andre Salerno, MSc
+date: '2019-04-14'
+slug: r-fundamentals
+categories:
+  - R
+tags: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, warning = FALSE)
+load("C:/Users/andre/r_programming/blogdown/env.RData")
+```
+
+### Asign
+
+```{r}
+z <- x + y
+z
+```
+
+
+### Basic operations
+
+```{r}
+n + 5
+```
+
+### Code Flow
+
+```{r}
+if (x < y){
+  print("x is lesser than y")
+} else if (x == y){
+  print("x is equal to y")
+} else {
+  print("x is greater than y")
+}
+
+for (i in 1:10) {
+  print(i)
+}
+
+t <- matrix(1:6, nrow = 2, ncol = 3)
+t
+
+for (i in seq(nrow(t))) {
+  for(j in seq(ncol(t))){
+    print(t[i,j])
+  }
+}
+```
+
+
+### Data Frames
+
+```{r}
+o <- c(1, 3, 5)
+p <- c("red", "yellow", "blue")
+q <- c(TRUE, FALSE, TRUE)
+df <- data.frame(o,p,q)
+df
+
+df[2,1]
+df[,"p"]
+
+r <- iris
+
+ncol(r)
+
+nrow(r)
+
+head(r, 2)
+
+str(r)
+```
+
+
+### Division of variables
+
+```{r}
+x / y
+```
+
+### Exponential
+
+```{r}
+exp(y)
+```
+
+### Factor
+
+```{r}
+f <- c(1,4,7,9,8,1)
+f <- factor(f)
+f
+levels(f)
+
+factor(f, exclude = 4)
+
+g <- c(1,2,7,7,1,2,2,7,1,7)
+g <- factor(g, levels = c(1,2,7), ordered = TRUE)
+g
+```
+
+
+### Factorial
+
+```{r}
+factorial(y)
+```
+
+### Functions
+
+```{r}
+squaredNum <- function(number){
+  s <- number^2
+  return(s)
+}
+
+squaredNum(25)
+```
+
+
+### Lists
+
+```{r}
+m <- list(1:4, "book", 1+4i)
+m
+
+m[[1]][2] # accessing elements in a list
+```
+
+
+### Logical operators
+
+```{r}
+x > y
+
+x + y != 8
+
+x == y
+
+x & y > 2
+
+isTRUE(x < y)
+```
+
+### Matrices
+
+```{r}
+i <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3, byrow = TRUE, dimnames = list(c("Obs1", "Obs2"), c("Col1", "Col2", "Col3")))
+i
+
+j <- rbind(1:3, 4:6, 10:12)
+j
+
+k <- cbind(1:3, 4:6, 10:12)
+k
+
+l <- array(c(1,2,3,4,5,6), dim = c(2,3))
+l
+
+l[1,2]
+```
+
+### Matrix Functions
+
+```{r}
+diag(l) # matrix diagonal
+
+dim(l) # dimensions
+
+colSums(l) # column sums
+
+rowSums(l) # row sums
+
+t(l) # matrix transpose
+
+```
+
+
+### Maximum value
+
+```{r}
+max(x,y)
+```
+
+### Minimum value
+
+```{r}
+min(x,y)
+```
+
+
+### Multiplication of variables
+
+```{r}
+x * y
+```
+
+
+
+### Objects
+
+```{r}
+n <- 10
+```
+
+### pi number:
+
+```{r}
+x * pi
+```
+
+
+### Power of variables
+
+```{r}
+x ** y
+```
+
+### Sign of a number
+
+```{r}
+sign(y)
+```
+
+### Square root
+
+```{r}
+sqrt(y)
+```
+
+### String
+
+```{r}
+h <- "This is our first string"
+class(h)
+```
+
+### String function
+
+```{r}
+nchar(h)
+
+substring(h, 4)
+
+substring(h, 1,4)
+
+strsplit(h, " ")
+
+grep("our", h)
+
+grep("book", h)
+
+regexpr("our",h)
+
+tolower(h)
+
+toupper(h)
+
+sub("our", "my", h)
+
+paste(h, "My book", sep = " : ")
+```
+
+
+
+### Subtractions of variables
+
+```{r}
+x - y
+```
+
+
+### Sum variables
+
+```{r}
+x <- 4
+y <- 3
+
+x + y
+```
+
+## Vector
+
+```{r}
+a <- c(1,3,5,8)
+class(a)
+
+a + 3 ## adding 3
+
+b <- c(1:10) # consecutive numbers
+b
+
+c <- seq(1, 5, by = 0.5)
+c
+
+d <- seq(1, 5, length.out = 22)
+d
+
+e <- rep(22, 4)
+e
+
+rev(b) # reverse
+```
+
+### Vector indexing
+
+```{r}
+a[-3] # excluding third element
+
+a[2] # choosing second element
+
+a[1:2] # choosing sequence
+
+a[a>2 & a<6]
+
+a[c(TRUE, FALSE, FALSE, TRUE)]
+```
+
+### Vector functions
+
+```{r}
+sum(a)
+
+prod(a)
+
+length(a)
+
+a[1] <- 4
+a
+```
+

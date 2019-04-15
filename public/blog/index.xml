@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>UTF-8</language>
-    <lastBuildDate>Sat, 10 Oct 2015 13:07:31 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 14 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R Fundamentals</title>
+      <link>/blog/2019/04/14/2019-04-14-r-fundamentals/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2019/04/14/2019-04-14-r-fundamentals/</guid>
+      <description>Asignz &amp;lt;- x + yz## [1] 7Basic operationsn + 5## [1] 15Code Flowif (x &amp;lt; y){print(&amp;quot;x is lesser than y&amp;quot;)} else if (x == y){print(&amp;quot;x is equal to y&amp;quot;)} else {print(&amp;quot;x is greater than y&amp;quot;)}## [1] &amp;quot;x is greater than y&amp;quot;for (i in 1:10) {print(i)}## [1] 1## [1] 2## [1] 3## [1] 4## [1] 5## [1] 6## [1] 7## [1] 8## [1] 9## [1] 10t &amp;lt;- matrix(1:6, nrow = 2, ncol = 3)t## [,1] [,2] [,3]## [1,] 1 3 5## [2,] 2 4 6for (i in seq(nrow(t))) {for(j in seq(ncol(t))){print(t[i,j])}}## [1] 1## [1] 3## [1] 5## [1] 2## [1] 4## [1] 6Data Frameso &amp;lt;- c(1, 3, 5)p &amp;lt;- c(&amp;quot;red&amp;quot;, &amp;quot;yellow&amp;quot;, &amp;quot;blue&amp;quot;)q &amp;lt;- c(TRUE, FALSE, TRUE)df &amp;lt;- data.</description>
+    </item>
     
     <item>
       <title>Migrate from Jekyll</title>
@@ -59,7 +68,7 @@ Follow the following steps:
     <item>
       <title>Hello R Markdown</title>
       <link>/blog/2015/07/23/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>/blog/2015/07/23/2015-07-23-r-rmarkdown/</guid>
       <description>teste</description>
