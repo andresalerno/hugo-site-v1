@@ -1,10 +1,8 @@
 ---
-title: teste
-author: Prof Andre Salerno, MSc
-date: '2019-04-15'
-slug: teste
-categories:
-  - programming
-tags:
-  - regression
+title: "R Fundamentals"
+author: "Prof. Andre Salerno, MSc"
+date: '2019-04-14'
+categories: ["R"]
+tags: ["fundamentals", "commands"]
+draft: false
 ---

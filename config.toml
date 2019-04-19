@@ -1,8 +1,8 @@
 baseurl = "http://aspartners.com.br"
 #title = "AS Partners Finance & Tech Solutions"
 theme = "hugo-universal-theme"
-themesDir = "c:/Users/andre/r_programming/blogdown/themes"
-languageCode = "UTF-8"
+#themesDir = "c:/Users/andre/r_programming/blogdown/themes"
+languageCode = "pt-br"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "pt-br"
 # Enable comments by entering your Disqus shortname
@@ -11,7 +11,7 @@ disqusShortname = "andresalerno.disqus.com"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-62383348-1"
 
-logo = "c:/Users/andre/r_programming/blogdown/static/logo.png"
+logo = "/img/as_partners.jpg"
 
 favicon = "c:/Users/andre/r_programming/blogdown/static/favicon.ico"
 
